@@ -236,6 +236,7 @@ section {
 
 section .container {
    height: 100%;
+   margin: auto;
 }
 
 .sec .container .up-of-form {
@@ -268,7 +269,7 @@ section .container {
 .parent-of-carts {
    display: flex;
    flex-direction: column;
-   width: 65%;
+   width: 100%;
    margin: 20px 0;
 }
 
@@ -277,7 +278,7 @@ section .container {
    background-color: azure;
    border: 2px solid black;
    border-radius: 10px;
-   width: 100%;
+   width: 65%;
    height: auto;
    justify-content: space-between;
    overflow: auto;
@@ -285,21 +286,63 @@ section .container {
 }
 
 @media (max-width: 1500px) {
-   .parent-of-carts {
+   .parent-of-carts .cart {
       width: 100%;
    }
 
-   .parent-of-carts .cart {
-      height: auto;
+}
+
+@media (max-width: 1066px){
+   .parent-of-carts .cart{
+      display: flex;
+      flex-direction: column !important;
+      width: 100%;
+      height: 60vh;
+      overflow: auto;
+   } 
+   .parent-of-carts .cart .parent-of-imege,
+   .parent-of-title,
+   .parent-of-p {
+      width: 100% !important;
+      height: 100%;
+   }
+   .parent-of-carts .cart .parent-of-p {
+      font-size: 25px !important;
+   }
+   .parent-of-carts .cart .parent-of-add .add {
+      padding: 15px;
+      height: 60px !important;
+      margin: 5px 0 20px 0;
    }
 }
 
 @media (max-width: 864px) {
+   .parent-of-carts{
+      margin: auto;
+   }
+
+   .the-more{
+      top: 100px;
+      margin: auto;
+      width: auto;
+      height: auto !important;
+   }
+
+   .the-more li{
+      margin: 5px 0;
+   }
+
+   .the-more .login{
+      display: flex;
+      flex-direction: column;
+   }
+
    .parent-of-carts .cart {
       height: 50vh;
-      width: 110%;
+      width: 100%;
       margin: auto;
-      margin-left: -30px;
+      /* margin-left: -30px; */
+      margin: auto;
       display: flex;
       flex-direction: column;
       height: 70vh;
@@ -311,7 +354,7 @@ section .container {
       width: 100% !important;
    }
 
-   .parent-of-carts .cart .parent-of-imege {
+   .parent-of-carts .cart {
       height: 60% !important;
    }
 
@@ -368,6 +411,15 @@ section .container {
 
    .head li:hover {
       background-color: #a5143f;
+   }
+}
+
+@media(max-width: 576px){
+   .parent-of-carts .cart{
+      height: 60vh !important;
+   }
+   .parent-of-carts .cart .parent-of-p {
+      font-size: 25px !important;
    }
 }
 
